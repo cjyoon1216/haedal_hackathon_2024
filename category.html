@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <link rel="stylesheet" href="css/category.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+        @import url('https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <span class="title">MY SITE TITLE</span>
+    </div>
+    
+    <!--Main Section-->
+    <div class="main">
+        <div class="top-section">
+            <form class="user_choose">
+                <div class="dropdown-label">
+                    Trip Guide
+                    <span style="font-family: Material Icons;">restaurant</span>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                    <span class="dropbtn_icon">more_horiz</span>
+                    <span class="dropbtn_content">Select a menu...</span>
+                    <span class="dropbtn_click" style="font-family: Material Icons; font-size : 16px; color : #3b3b3b; float:right;"
+                        onclick="dropdown()">arrow_drop_down</span>
+                    </button>
+                    <div class="dropdown-content">
+                      <div class="fastfood" onclick="showMenu(this.innerText)">Burgerking</div>
+                      <div class="fastfood" onclick="showMenu(this.innerText)">Mcdonals</div>
+                      <div class="fastfood" onclick="showMenu(this.innerText)">Lotteria</div>
+                      <div class="fastfood" onclick="showMenu(this.innerText)">Mom's touch</div>
+                      <div class="fastfood" onclick="showMenu(this.innerText)">In n out</div>
+                      <div class="fastfood" onclick="showMenu(this.innerText)">Subway</div>
+                      <div class="fastfood" onclick="showMenu(this.innerText)">Shake shack</div>
+                    </div>
+                  </div>
+            </form>
+        </div>
+
+        <div class="bottom_section">
+
+        </div>
+    </div>
+
+</body>
+</html>
