@@ -6,6 +6,11 @@ async function submitForm() {
         location: form.location.value,
         companion: form.companion.value
     };
+    const duration = document.getElementById('duration').value;
+    localStorage.setItem('selectedDate', startDate);
+    localStorage.setItem('selectedDuration', duration);
+    localStorage.setItem('selectedLocation', location);
+    localStorage.setItem('selectedCompanion', companion);
 
     try {
         const response = await fetch('http://localhost:8080/ai/spots', {

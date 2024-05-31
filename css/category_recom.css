@@ -103,10 +103,11 @@ input, select {
 }
 
 .ai_image{
-    width: 450px;
+    width: 530px;
     height: 100%;
-    margin: 30px 0px 0px 30px;
+    margin: 30px 0px 0px 60px;
     position: relative;
+    z-index: 3;
 }
 .ai_image>img{
     width:100%;
@@ -123,7 +124,7 @@ input, select {
     animation-duration: 0.4s; 
     animation-iteration-count: infinite; 
     font-size: 17px;
-    margin: 55px 0px 0px 275px;
+    margin: 59px 0px 0px 300px;
     position: absolute;
     font-family: 'DungGeunMo';
 } 
@@ -135,31 +136,44 @@ input, select {
 
 .result{
     width:55%;
-    margin-left: 30px;
+    margin-left: -50px;
     display: flex;
     padding: 25px; 
     position: relative
 }
-
+h3{
+    color: rgb(238, 236, 229);
+    font-family: 'S-CoreDream-3Light';
+    font-weight: lighter;
+    font-size: 19px;
+    margin-left: 30px;
+}
 .plan{
     width: 80%;
     height: 100%;
-    background-color: #dabd2d;
+    background-color: #a19559;
+    border-radius: 10px;
 }
 
+#postForm {
+    width: 20%;
+}
+#postForm div{
+    position: absolute;
+    bottom:0;
+}
 #postForm button{
     background-color: #aca47c;
     color: white;
     padding: 10px 20px;
-    margin: 0px 0px 25px 20px;
+    margin: 0px 0px 30px 20px;
     border: none;
     border-radius: 4px;
     width: 170px;
     cursor: pointer;
     font-size: 16px;
     font-family: 'S-CoreDream-3Light';
-    position: absolute;
-    bottom:0;
+    
 }
 
 #postForm button:hover{
