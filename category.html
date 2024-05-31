@@ -1,54 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category</title>
+    <title>Trabbit</title>
     <link rel="stylesheet" href="css/category.css">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
         @import url('https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
     </style>
 </head>
-
 <body>
-    <div class="back">
-        <span class="title">MY SITE TITLE</span>
+    <div id="intro" class="intro-container">
+        <a href="main.html"><h1>Trabbit</h1></a>
     </div>
-    
-    <!--Main Section-->
-    <div class="main">
-        <div class="top-section">
-            <form class="user_choose">
-                <div class="dropdown-label">
-                    Trip Guide
-                    <span style="font-family: Material Icons;">restaurant</span>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">
-                    <span class="dropbtn_icon">more_horiz</span>
-                    <span class="dropbtn_content">Select a menu...</span>
-                    <span class="dropbtn_click" style="font-family: Material Icons; font-size : 16px; color : #3b3b3b; float:right;"
-                        onclick="dropdown()">arrow_drop_down</span>
-                    </button>
-                    <div class="dropdown-content">
-                      <div class="fastfood" onclick="showMenu(this.innerText)">Burgerking</div>
-                      <div class="fastfood" onclick="showMenu(this.innerText)">Mcdonals</div>
-                      <div class="fastfood" onclick="showMenu(this.innerText)">Lotteria</div>
-                      <div class="fastfood" onclick="showMenu(this.innerText)">Mom's touch</div>
-                      <div class="fastfood" onclick="showMenu(this.innerText)">In n out</div>
-                      <div class="fastfood" onclick="showMenu(this.innerText)">Subway</div>
-                      <div class="fastfood" onclick="showMenu(this.innerText)">Shake shack</div>
-                    </div>
-                  </div>
-            </form>
+    <form id="travelForm">
+        <div class="box">
+            <div class="box1">
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate" name="startDate">
+                <br>
+            </div>
+            <div class="box2">
+                <label for="duration">여행 기간</label>
+                <select id="duration" name="duration">
+                    <option value="당일치기">당일치기</option>
+                    <option value="1박 2일">1박 2일</option>
+                    <option value="2박 3일">2박 3일</option>
+                    <option value="3박 4일">3박 4일</option>
+                    <option value="4박 5일">4박 5일</option>
+                    <option value="일주일 이상">그 이상</option>
+                </select>
+                <br>
+            </div>
         </div>
-
-        <div class="bottom_section">
-
+        <div class="box">
+            <div class="box1">
+                <label for="location">여행지</label>
+                <select id="location" name="location">
+                    <option value="서울">서울</option>
+                    <option value="대전">대전</option>
+                    <option value="대구">대구</option>
+                    <option value="부산">부산</option>
+                    <option value="인천">제주</option>
+                    <option value="울산">울산</option>
+                    <option value="광주">광주</option>
+                    <option value="제주도">제주</option>
+                    <option value="경기도">경기</option>
+                    <option value="강원도">강원</option>
+                    <option value="충청남도">충남</option>
+                    <option value="충청북도">충북</option>
+                    <option value="전라남도">전남</option>
+                    <option value="전라북도">전북</option>
+                    <option value="경상남도">경남</option>
+                    <option value="경상북도">경북</option>
+                </select>
+                <br>
+            </div>
+            <div class="box2">
+                <label for="companion">동행인</label>
+                <select id="companion" name="companion">
+                    <option value="가족과">가족</option>
+                    <option value="친구와">친구</option>
+                    <option value="연인과">연인</option>
+                    <option value="동료와">동료</option>
+                    <option value="혼자서">없음</option>
+                </select>
+                <br>
+            </div>
         </div>
+        <a href="category_recom.html"><button type="button" onclick="submitForm()">계획 짜기</button></a>
+    </form>
+
+    <div class="ai_image">
+        <div class="typing-txt"> 
+            <ul>
+              <li>카테고리를 선택하시고</li>
+              <li>저의 추천을 받아보세요!</li>
+            </ul>
+        </div> 
+        <p class="typing"></p>  
+        <img src="img/toki2.png" alt="ai 이미지">
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

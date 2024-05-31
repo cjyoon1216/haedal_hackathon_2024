@@ -9,7 +9,7 @@
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
     font-weight: lighter;
     font-style: normal;
-}
+}   
 @font-face {
     font-family: 'S-CoreDream-3Light';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
@@ -24,7 +24,7 @@
 }
 
 
-body{
+body{   
     all:unset;
     box-sizing: border-box;
     margin: 0;
@@ -32,49 +32,42 @@ body{
     width:100%;
     height:100%;
     text-decoration: none;
-}
-
-.main{
-}
-
-.back{
     background-color: #f1efed;
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
 }
-.title{
+.intro-container{
+    width: 300px;
+}
+.intro-container > h1{
+    font-weight: lighter;
     font-family: "Poetsen One", sans-serif;
-    font-size: 28px;
-    color:#1C1C1C;
-    padding: 25px 0px 0px 230px;
-    height: 100px;
-}
+    font-size: 36px;
+    margin: 20px 0px 20px 230px;
+    color: #333;
+}   
+
 
 .login{
-    background-image: linear-gradient(to top right, #1C1C1C,#271f1fd7 );
-    margin: -650px 100px 0px 100px;
-    height: 500px;
+    background-image: linear-gradient(to top right, #362f27,#2e2d23d7 );
+    margin: 0px 100px 0px 100px;
+    height: 480px;
     border-radius: 30px;
-    padding: 100px 200px 0px 200px;
+    padding: 60px 200px 0px 200px;
     display: flex;
 }
 
 .login-wrapper{
-    width: 380px;
+    width: 340px;
     height: 300px;
     box-sizing: border-box;
 }
 
 .login_state{
     font-family: "Poetsen One", sans-serif;
-    font-size: 65px;
+    font-size: 58px;
     color:#fafafa;
-    margin: 90px;
+    margin: 95px;
 }
-
-#login-form > input{
+#login-form > input,button{
     width: 100%;
     height: 48px;
     padding: 0 10px;
@@ -82,6 +75,8 @@ body{
     margin-bottom: 16px;
     border-radius: 8px;
     background-color: #FAFAFA;
+    border:none;
+    
 }
 #login-form > input::placeholder{
     color: #a79d9d;
@@ -89,12 +84,17 @@ body{
 #login-form > input[type="text"]{
     margin-top: 40px;
 }
-#login-form > input[type="submit"]{
+#login-form > button[type="submit"]{
     color: #fff;
     font-size: 17px;
-    background-color: #605751;
+    background-color: #6e645d;
     margin-top: 19px;
     font-family: 'DungGeunMo';
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    letter-spacing: 4px;
 }
 #login-form > input[type="checkbox"]{
     display: none;
@@ -117,7 +117,7 @@ body{
 }
 
 .another{
-    padding-left: 43px;
+    padding-left: 23px;
 }
 
 .another a{
@@ -131,9 +131,9 @@ body{
 
 
 .ai_image{
-    width: 530px;
+    width: 600px;
     height: 100%;
-    margin: -30px -100px 0px 80px;
+    margin: -30px -100px 0px 50px;
     position: relative;
 }
 .ai_image>img{
@@ -150,9 +150,9 @@ body{
     animation-name: cursor; 
     animation-duration: 0.4s; 
     animation-iteration-count: infinite; 
-    font-size: 20px;
+    font-size: 21px;
     position: absolute;
-    margin: 75px 0px 0px 28px;
+    margin: 75px 0px 0px 365px;
     font-family: 'DungGeunMo';
 } 
 @keyframes cursor{ 

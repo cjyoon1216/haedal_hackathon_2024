@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}   
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MoveSans-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    all:unset;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:100%;
+    text-decoration: none;
+    background-color: #f1efed;
+}
+.intro-container{
+    width: 300px;
+}
+.intro-container>a{
+    text-decoration-line: none;
+}
+.intro-container >a> h1{
+    font-weight: lighter;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 36px;
+    margin: 20px 0px 20px 230px;
+    color: #333;
+}   
+
+#travelForm {
+    background-color: #fff;
+    padding: 20px 50px 20px 50px;
+    margin: 10px 100px 10px 100px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 17px;
+    height: 150px;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    
+    font-family: 'S-CoreDream-3Light';
+}
+.box{
+    display: flex;
+    width: 100%;
+}
+.box > *{
+    width: 25%;
+     
+}
+.box :not(last-child){
+    margin-right: 13px;
+}
+
+
+
+input, select {
+    margin: 5px 0 20px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'S-CoreDream-3Light';
+}
+
+#travelForm button {
+    background-color: #aca47c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 150px;
+    cursor: pointer;
+    font-family: 'S-CoreDream-3Light';
+}
+
+#travelForm button:hover {
+    background-color: #3b3d27;
+}
+
+.ai_image{
+    width: 450px;
+    height: 100%;
+    margin: 30px 0px 0px 30px;
+    position: relative;
+}
+.ai_image>img{
+    width:100%;
+}
+.typing-txt{
+    display: none;
+}
+.typing-txt ul{
+    list-style:none;
+}
+.typing {  
+    display: inline-block; 
+    animation-name: cursor; 
+    animation-duration: 0.4s; 
+    animation-iteration-count: infinite; 
+    font-size: 17px;
+    margin: 55px 0px 0px 275px;
+    position: absolute;
+    font-family: 'DungGeunMo';
+} 
+@keyframes cursor{ 
+  0%{border-right: 1px solid #fff} 
+  50%{border-right: 1px solid #000} 
+  100%{border-right: 1px solid #fff} 
+}
+
+.result{
+    width:55%;
+    margin-left: 30px;
+    display: flex;
+    padding: 25px; 
+    position: relative
+}
+
+.plan{
+    width: 80%;
+    height: 100%;
+    background-color: #dabd2d;
+}
+
+#postForm button{
+    background-color: #aca47c;
+    color: white;
+    padding: 10px 20px;
+    margin: 0px 0px 25px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 170px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'S-CoreDream-3Light';
+    position: absolute;
+    bottom:0;
+}
+
+#postForm button:hover{
+    background-color: #3b3d27;
+
+}
