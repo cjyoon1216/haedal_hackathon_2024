@@ -2,8 +2,18 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabbit</title>
-    <link rel="stylesheet" href="css/category.css">
+
+    <script src="js/Altourguide.js"></script>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabbit</title>
+    <link rel="stylesheet" href="css/category_recom.css">
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
@@ -19,12 +29,12 @@
     </div>
     <form id="travelForm">
         <div class="box">
-            <div class="box1">
+            <div>
                 <label for="startDate">Start Date</label>
                 <input type="date" id="startDate" name="startDate">
                 <br>
             </div>
-            <div class="box2">
+            <div>
                 <label for="duration">여행 기간</label>
                 <select id="duration" name="duration">
                     <option value="당일치기">당일치기</option>
@@ -36,9 +46,7 @@
                 </select>
                 <br>
             </div>
-        </div>
-        <div class="box">
-            <div class="box1">
+            <div>
                 <label for="location">여행지</label>
                 <select id="location" name="location">
                     <option value="서울">서울</option>
@@ -60,7 +68,7 @@
                 </select>
                 <br>
             </div>
-            <div class="box2">
+            <div>
                 <label for="companion">동행인</label>
                 <select id="companion" name="companion">
                     <option value="가족과">가족</option>
@@ -72,20 +80,37 @@
                 <br>
             </div>
         </div>
-        <a href="category_recom.html"><button type="button" onclick="submitForm()">계획 짜기</button></a>
+        <a href="#"><button type="button" onclick="submitForm()">계획 다시 짜기 </button></a>
     </form>
 
-    <div class="ai_image">
-        <div class="typing-txt"> 
-            <ul>
-              <li>카테고리를 선택하시고</li>
-              <li>저의 추천을 받아보세요!</li>
-            </ul>
-        </div> 
-        <p class="typing"></p>  
-        <img src="img/toki2.png" alt="ai 이미지">
+    <div class="" style="display: flex;">
+        <div class="ai_image">
+            <div class="typing-txt"> 
+                <ul>
+                <li>추천 결과입니다 :)</li>
+                <li>게시판에 등록하여</li>
+                <li>피드백을 받아보세요</li>
+                </ul>
+            </div> 
+            <p class="typing"></p>  
+            <img src="img/toki.png" alt="ai 이미지">
+        </div>
+        <div class="result">
+            <div id="checkboxesContainer" class="plan">
+                <h2>제외하고 싶은 장소를 선택해주세요!</h2>
+                <div id="spotsList">
+                    <input type="checkbox" id="spot.name" value = "경복궁">
+                    <label id=""></label>
+                    <br>
+                    <button id="confirmButton">확인</button>
+                </div>
+            </div>
+            <form id="postForm">
+                <a href="#"><button type="button" onclick="submitForm()">게시판등록</button></a>
+            </form>
+        </div>
     </div>
-
-    <script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>
