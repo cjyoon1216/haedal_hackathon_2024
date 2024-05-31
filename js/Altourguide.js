@@ -6,11 +6,6 @@ async function submitForm() {
         location: form.location.value,
         companion: form.companion.value
     };
-    const duration = document.getElementById('duration').value;
-    localStorage.setItem('selectedDate', startDate);
-    localStorage.setItem('selectedDuration', duration);
-    localStorage.setItem('selectedLocation', location);
-    localStorage.setItem('selectedCompanion', companion);
 
     try {
         const response = await fetch('http://localhost:8080/ai/spots', {
@@ -36,6 +31,57 @@ async function submitForm() {
     }
 }
 
+function createCheckboxes(spots) {
+    const spotsListDiv = document.getElementById('spotsList');
+    if (!spotsListDiv) {
+        console.error("Element with ID 'spotsList' not found");
+        return;
+    }
+    spotsListDiv.innerHTML = ''; // 기존 내용을 비웁니다.
+
+    spots.forEach((spot) => {
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = spot.name;
+        checkbox.value = spot.name;
+
+        const label = document.createElement('label');
+        label.htmlFor = checkbox.id;
+        label.appendChild(document.createTextNode(spot.name));
+
+        spotsListDiv.appendChild(checkbox);
+        spotsListDiv.appendChild(label);
+        spotsListDiv.appendChild(document.createElement('br'));
+    });
+
+    const confirmButton = document.createElement('button');
+    confirmButton.textContent = '확인';
+    confirmButton.id = 'confirmButton';
+
+    confirmButton.addEventListener('click', function() {
+        const selectedSpots = [];
+        spots.forEach((spot) => {
+            const checkbox = document.getElementById(spot.name);
+            if (checkbox.checked) {
+                selectedSpots.push(spot.name);
+            }
+        });
+
+        const unselectedSpots = spots.filter(spot => !selectedSpots.includes(spot.name));
+        const sendingSpot = unselectedSpots.map(spot => spot.name);
+
+        console.log('Selected spots:', selectedSpots);
+        console.log('Sending spots:', sendingSpot);
+
+        document.getElementById('checkboxesContainer').style.display = 'none';
+        document.getElementById('travelForm').style.display = 'block';
+
+        // 필요한 경우 선택되지 않은 값들을 서버로 다시 보내는 로직을 추가할 수 있습니다.
+        // 예: submitUnselectedSpots(sendingSpot);
+    });
+
+    spotsListDiv.appendChild(confirmButton);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('travelForm');
