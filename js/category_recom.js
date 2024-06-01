@@ -194,7 +194,7 @@ async function detail() {
         if (response.ok) {
             const data = await response.json();
             // 로컬 스토리지에 응답 데이터 저장
-            localStorage.setItem('scheduleData', JSON.stringify(data));
+            localStorage.setItem('schedule', JSON.stringify(data));
             alert('일정이 성공적으로 저장되었습니다.');
         } else {
             alert('일정을 저장하는 데 실패했습니다.');

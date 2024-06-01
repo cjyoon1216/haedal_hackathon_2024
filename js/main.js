@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const token = localStorage.getItem('token');
         if (!token) {
             alert('로그인이 필요합니다.');
-            window.location.href = '/login.html'; // 로그인 페이지로 리다이렉트
+            window.location.href = '/home.html'; // 로그인 페이지로 리다이렉트
             return;
         }
 
@@ -52,6 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 버튼이 클릭되면 'AItourguide.html' 페이지로 이동합니다.
     aiPlanButton.addEventListener("click", function() {
-        window.location.href = 'http://127.0.0.1:5500/haedal_hackathon_2024-master/AItourguide.html';
+        window.location.href = 'http://127.0.0.1:5500/haedal_hackathon_2024-master/category.html';
     });
 });
