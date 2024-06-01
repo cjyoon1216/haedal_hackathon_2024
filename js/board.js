@@ -1,43 +1,70 @@
 document.addEventListener("DOMContentLoaded", function() {
     const imgBox = document.getElementById('img_box');
 
-    // 연예인 데이터를 백엔드에서 가져오는 함수
-    async function fetchCelebrities() {
+    async function fetchPlaces() {
         try {
-            // 백엔드 엔드포인트를 실제 URL로 교체
-            const response = await fetch('https://your-backend-endpoint.com/celebrities'); 
+            const response = await fetch('https://your-backend-endpoint.com/places'); // 백엔드 엔드포인트를 실제 URL로 교체
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            const celebrities = await response.json();
+            const places = await response.json();
 
-            // 연예인 데이터를 DOM에 추가
-            celebrities.forEach((celebrity, index) => {
-                // box1 div 생성
+            places.forEach((place, index) => {
                 const box = document.createElement('div');
                 box.className = 'box1';
 
-                // img 태그 생성
                 const img = document.createElement('img');
                 img.src = `img/photo-${index + 1}.jpg`; // photo-{i}.jpg로 설정
-                img.alt = celebrity.name;
+                img.alt = place.name;
 
-                // p 태그 생성
-                const p = document.createElement('p');
-                p.textContent = celebrity.name;
+                const nameP = document.createElement('p');
+                nameP.textContent = place.name;
 
-                // img와 p 태그를 box1 div에 추가
                 box.appendChild(img);
-                box.appendChild(p);
+                box.appendChild(nameP);
 
-                // box1 div를 img_box div에 추가
                 imgBox.appendChild(box);
             });
         } catch (error) {
-            console.error('Failed to fetch celebrities:', error);
+            console.error('Failed to fetch places:', error);
         }
     }
 
-    // 연예인 데이터를 가져와서 화면에 표시
-    fetchCelebrities();
+    fetchPlaces();
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const detailBox = document.querySelector('.detail_box');
+
+    async function fetchPlaces() {
+        try {
+            const response = await fetch('https://your-backend-endpoint.com/places'); // 백엔드 엔드포인트를 실제 URL로 교체
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const places = await response.json();
+
+            places.forEach(place => {
+                const box2 = document.createElement('div');
+                box2.className = 'box2';
+
+                const h3 = document.createElement('h3');
+                h3.textContent = place.name;
+
+                const p = document.createElement('p');
+                p.textContent = place.detail;
+
+                box2.appendChild(h3);
+                box2.appendChild(p);
+
+                detailBox.appendChild(box2);
+            });
+        } catch (error) {
+            console.error('Failed to fetch places:', error);
+        }
+    }
+
+    fetchPlaces();
 });
