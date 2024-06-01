@@ -36,8 +36,9 @@
   
   .container {
     display: flex;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
+    border-radius: 30px;
     background-color: rgb(181, 178, 144);
   }
   
@@ -45,7 +46,11 @@
     width: 230px; /* 변경된 너비 */
     margin-right: 20px;
     border: 1px solid #8a8989c0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
     padding: 20px;
+    font-family: 'S-CoreDream-3Light';
+    background-color: rgb(154, 151, 124);
   }
   
   .main-content {
@@ -86,7 +91,10 @@
     font-size: 28px; /* 변경된 크기 */
     font-weight: lighter; 
   }
-  
+  p{
+    
+  font-family: 'S-CoreDream-3Light';
+  }
   ul {
     list-style-type: none;
     padding: 0;
@@ -96,4 +104,43 @@
     margin: 10px 0;
     padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
   }
+
+  a{
+    text-decoration: none;
+    color: #3b1d1d;
+  }
+
+  .ai_img{
+    position: fixed;
+    width: 440px;
+    bottom: 0;
+    left:0;
+  }
+
+  .ai_img > img{
+    width: 100%;
+  }
+  .typing-txt{
+    display: none;
+}
+.typing-txt ul{
+    list-style:none;
+}
+.typing {  
+    display: inline-block; 
+    animation-name: cursor; 
+    animation-duration: 0.4s; 
+    animation-iteration-count: infinite; 
+    font-size: 23px;
+    margin: 50px 0px 0px 270px;
+    position: absolute;
+    font-family: 'DungGeunMo';
+} 
+@keyframes cursor{ 
+  0%{border-right: 1px solid #fff} 
+  50%{border-right: 1px solid #000} 
+  100%{border-right: 1px solid #fff} 
+}

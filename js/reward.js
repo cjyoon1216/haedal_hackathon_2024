@@ -42,19 +42,4 @@ document.addEventListener("DOMContentLoaded", function () {
     listItem.innerHTML = `<p>${reward.name}</p><p>${reward.points} 포인트</p>`;
     rewardsList.appendChild(listItem);
   });
-
-  // 카테고리 목록 가져오기
-  fetch("http://localhost:8080/categories")
-    .then((response) => response.json())
-    .then((categories) => {
-      const categoryList = document.getElementById("category_name");
-      categories.forEach((category) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = category;
-        categoryList.appendChild(listItem);
-      });
-    })
-    .catch((error) => {
-      console.error("Error fetching categories:", error);
-    });
 });

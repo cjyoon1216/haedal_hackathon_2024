@@ -6,7 +6,9 @@
     <title>Rewards Page</title>
     <link rel="stylesheet" href="css/reward.css" />
     <script src="js/reward.js"></script>
-
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
       @import url('https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
@@ -20,11 +22,16 @@
     
     <div class="container">
       <div class="sidebar">
-        <h2>게시판 카테고리</h2>
-        <ul id="category-list">
-          <!-- 카테고리 항목이 여기에 추가됩니다 -->
-        </ul>
+        <div class="right">
+          <ul>
+              <li><a href="category.html">AI 계획추천</a></li>
+              <li><a href="#">게시판</a></li>
+              <li><a href="reward.html">포인트교환</a></li>
+              <li><a href="home.html">Log out</a></li>
+            </ul>
+        </div>
       </div>
+
       <div class="main-content">
         <h1>Reward Page!</h1>
         <div class="user-info">
@@ -43,7 +50,17 @@
           </ul>
         </div>
       </div>
+      
+      <div class="ai_img">
+        <div class="typing-txt"> 
+          <ul>
+            <li>포인트를</li>
+            <li>교환하세요!</li>
+          </ul>
+        </div> 
+        <p class="typing"></p>
+        <img src="img/toki.png" alt="ai">
+      </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
