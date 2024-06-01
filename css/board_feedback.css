@@ -128,7 +128,7 @@ body{
 
 .detail_box{
     margin-top: 30px;
-    background-color: rgb(184, 188, 129);
+    background-color: rgb(181, 184, 150);
     border-radius: 30px;
     margin-left: 70px;
     width: 100%;
@@ -137,17 +137,68 @@ body{
     padding: 30px 0px 0px 50px;
 }
 
+.detail_box h2{
+    font-family: 'S-CoreDream-3Light';
+    color: aliceblue;
+    font-size: 17px;
+}
+
 .box2{
     font-family: 'S-CoreDream-3Light';
 }
 
 .box2 h3{
+    font-size: 22px;
 }
 
 .box2 p{
     margin-top: -15px;
-    background-color: aliceblue;
     max-width: 900px;
 }
 
+.feedback{
+    margin-bottom: 20px;
+    margin-left: 90px;
+    width: 100%;
+}
   
+.tag-box-txt {
+    padding-left: 20px;
+    min-height: 50px;
+    font-family: 'S-CoreDream-3Light';
+    position:relative;
+    display:inline-block;
+    width:800px;
+    font-size:18px;
+    background-color: #535254;
+    border-radius:10px;
+    text-align:center;
+    color:#fff;
+    line-height:2.3; 
+    letter-spacing: -.0.83px;
+    z-index:1;
+    box-shadow: 0 7px 8px rgba(170, 170, 170, 0.25);}
+
+.tag-box-txt:after { 
+    position: absolute;
+    left: -5px; top:10px;
+    display: block; 
+    content: '';
+    width: 20px; 
+    height: 20px; 
+    border-radius: 2px; 
+    background: #535254;
+    transform: rotate(45deg); 
+}
+
+#name{
+    display:flex;
+    margin-left: 25px;
+    margin-bottom: -10px;
+    font-family: 'S-CoreDream-3Light';
+    font-size: 18px;
+}
+
+#name > p{
+    margin-left: 5px;
+}
