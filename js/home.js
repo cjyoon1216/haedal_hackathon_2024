@@ -91,10 +91,18 @@ $(document).ready(function() {
         window.open('register.html', 'registerWindow', 'width=' + popupWidth + ', height=' + popupHeight + ', left=' + popupLeft + ', top=' + popupTop + ', scrollbars=yes');
     }
   });
-
+  
   document.addEventListener('DOMContentLoaded', (event) => {
     const user_name = localStorage.getItem('user_name');
+    const location = localStorage.getItem('location');
+    const duration = localStorage.getItem('duration');
     if (user_name) {
         document.getElementById('user_name').innerText = user_name;
+    }
+    if (location) {
+        document.getElementById('location').innerText = location;
+    }
+    if (duration) {
+        document.getElementById('duration').innerText = duration;
     }
   });

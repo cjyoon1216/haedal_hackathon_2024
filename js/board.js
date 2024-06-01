@@ -2,14 +2,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const imgBox = document.querySelector('.img_box');
     const detailBox = document.querySelector('.detail_box');
 
-    // 장소 데이터를 백엔드에서 가져오는 함수
-    async function fetchPlaces() {
+    // 장소 데이터를 localStorage에서 가져오는 함수
+    function fetchPlacesFromLocalStorage() {
         try {
-            const response = await fetch('https://your-backend-endpoint.com/places'); // 백엔드 엔드포인트를 실제 URL로 교체
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+            const storedData = localStorage.getItem('scheduleData');
+            if (!storedData) {
+                throw new Error('No data found in localStorage');
             }
-            const data = await response.json();
+            const data = JSON.parse(storedData);
             const places = data.spots; // JSON 구조에 맞게 수정
 
             // 장소 데이터를 img_box에 추가
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             // 장소 데이터를 detail_box에 추가
-            places.forEach(place => {
+            places.forEach((place) => {
                 const box2 = document.createElement('div');
                 box2.className = 'box2';
 
@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 detailBox.appendChild(box2);
             });
         } catch (error) {
-            console.error('Failed to fetch places:', error);
+            console.error('Failed to fetch places from localStorage:', error);
         }
     }
 
-    fetchPlaces();
+    fetchPlacesFromLocalStorage();
 });

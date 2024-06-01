@@ -51,14 +51,24 @@ body{
 .all{
     width: 90%;
 }
-
+.title{
+    display: flex;
+    margin-left: 100px;
+    font-size: 25px;
+    height: 40px;
+}
+.title p{
+    margin: 0 0 0 10px;
+    font-family: 'S-CoreDream-3Light';
+    font-weight: bold;
+}
 .user_information{
     display: flex;
     margin-left: 100px;
 }
 .user_information p{
     font-family: 'S-CoreDream-3Light';
-    margin-left:10px; 
+    margin: 0 0 20px 10px;
 }
 
 .ai_img{

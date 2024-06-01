@@ -30,6 +30,8 @@ async function submitForm() {
             days: dayCount
         };
         
+        localStorage.setItem('location', formData.location);
+        localStorage.setItem('duration', formData.duration);
     try {
         // 서버에 데이터를 전송하고 응답을 받습니다.
         const response = await fetch('http://localhost:8080/ai/spots', {

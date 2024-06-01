@@ -27,9 +27,9 @@
     <div class="login">   
         <div class="login-wrapper">
             <span class="login_state">Login!</span>
-            <form method="post" action="http://localhost:8080/auth/login" id="login-form" required>
-                <input type="text" name="userName" placeholder="User_Id" required>
-                <input type="password" name="userPassword" placeholder="Password">
+            <form method="post" action="http://localhost:8080/auth/login" id="login-form">
+                <input type="text" id="username" name="username" placeholder="User_Id" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
                 <label for="remember-check">
                     <input type="checkbox" id="remember-check">아이디 저장하기
                 </label>    

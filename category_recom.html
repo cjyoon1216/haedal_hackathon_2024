@@ -8,7 +8,7 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/Altourguide.js"></script>
+    <script src="js/category_recom.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
@@ -80,11 +80,11 @@
         <div class="ai_image">
             <div class="typing-txt"> 
                 <ul>
-                <li>추천 결과입니다 :)</li>
-                <li>자세한 일정을 보고</li>
-                <li>피드백을 받아보세요</li>
-                <li>다른 추천을 원하신다면</li>
-                <li>새로고침 해주세요 </li>
+                    <li>추천 결과입니다 :)</li>
+                    <li>자세한 일정을 보고</li>
+                    <li>피드백을 받아보세요</li>
+                    <li>다른 추천을 원하신다면</li>
+                    <li>새로고침 해주세요 </li>
                 </ul>
             </div> 
             <p class="typing"></p>  
@@ -93,17 +93,15 @@
         <div class="result">
             <div id="checkboxesContainer" class="plan">
                 <h3>삭제하고싶은 장소를 선택하고 자세히 보기를 누르세요!</h3>
+                <div id="checklistContainer"></div>
                 <div id="spotsList"></div>
             </div>
             <form id="postForm">
                 <div>
-                    <a href="category_recom.html"><button type="button" onclick="submitForm()">새로고침</button></a>
-                    <a href="board.html"><button type="button" onclick="submitForm()">자세히보기</button></a>
+                    <button type="button" onclick="refreshChecklist()">새로고침</button>
+                    <a href="#"><button type="button" onclick="detail()">자세히보기</button></a>
                 </div>
             </form>
         </div>
     </div>
-</body>
-</html>
-</body>
-</html>
+
