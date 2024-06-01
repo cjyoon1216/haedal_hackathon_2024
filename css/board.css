@@ -38,14 +38,16 @@ body{
 .intro-container{
     width: 300px;
 }
-
-.intro-container > h1{
+.intro-container>a{
+    text-decoration-line: none;
+}
+.intro-container >a> h1{
     font-weight: lighter;
     font-family: "Poetsen One", sans-serif;
     font-size: 36px;
     margin: 20px 0px 20px 230px;
     color: #333;
-}   
+}    
 .all{
     width: 90%;
 }
@@ -138,3 +140,47 @@ body{
     background-color: aliceblue;
     max-width: 900px;
 }
+
+.container {
+    font-family: 'S-CoreDream-3Light';
+    font-size: 17px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    margin-left: 75px;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a.button {
+    float: left;
+    width: 150px;
+    padding: 0;
+    margin: 10px 0px 10px 0px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    color: #FFF;
+    border-radius: 5px;
+    transition: all 0.2s ;
+  }
+
+  .btnOrange {
+    background: #c2aa5d;
+  }
+
+  .btnOrange.btnPush {
+    box-shadow: 0px 5px 0px 0px #84743f;
+  }
+
+  .btnPush:hover {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .btnOrange.btnPush:hover {
+    box-shadow: 0px 0px 0px 0px #84743f;
+  }
+  

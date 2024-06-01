@@ -44,6 +44,7 @@ $(document).ready(function() {
   
         const username = $('#username').val();
         const password = $('#password').val();
+        localStorage.setItem('user_name', username);
   
         try {
             const response = await fetch('http://localhost:8080/auth/login', {
@@ -61,6 +62,8 @@ $(document).ready(function() {
                 console.log('로그인 성공:', data.token);
   
                 // 로그인 성공 시 토큰 저장
+                
+                localStorage.setItem('token', data.token);
                 localStorage.setItem('token', data.token);
   
                 // 메인 페이지로 이동하는 등의 추가 처리
@@ -86,5 +89,12 @@ $(document).ready(function() {
         var popupTop = window.moveTo(0, -300); // 페이지 상단에서 50px 아래에 위치
   
         window.open('register.html', 'registerWindow', 'width=' + popupWidth + ', height=' + popupHeight + ', left=' + popupLeft + ', top=' + popupTop + ', scrollbars=yes');
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const user_name = localStorage.getItem('user_name');
+    if (user_name) {
+        document.getElementById('user_name').innerText = user_name;
     }
   });

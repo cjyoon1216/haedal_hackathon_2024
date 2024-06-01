@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (response.status !== 200) {
             throw new Error(data.message);
         }
+        
 
         // 생일로부터 현재 나이 계산
         const birthDate = new Date(data.birthdate);

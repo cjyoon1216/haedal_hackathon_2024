@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabbit</title>
+    <link rel="stylesheet" href="css/board_feedback.css">
+
+    <script src="js/board.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/home.js"></script>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1; // 0부터 시작하므로 +1
+            var day = now.getDate();
+            var hours = now.getHours().toString().padStart(2, '0');
+            var minutes = now.getMinutes().toString().padStart(2, '0');
+            var currentTime = year + '년 ' + month + '월 ' + day + '일 ' + hours + ':' + minutes;
+            document.getElementById('current_time').innerText = currentTime;
+        }
+
+        window.onload = updateTime
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+        @import url('https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+    </style>
+</head>
+<body>
+    <div id="intro" class="intro-container">
+        <a href="main.html"><h1 class="title">Trabbit</h1></a>
+    </div>
+
+    <div id="all" class="all">
+        <div class="user_information">
+            <p>게시자: </p>
+            <p id="user_name"></p>
+            <p>/</p>
+            <p>업로드 시간:</p>
+            <p id="current_time"></p>
+        </div>
+        <div class="ai_img"> 
+            <div class="typing-txt"> 
+                <ul>
+                <li>업로드 완료!</li>
+                <li>피드백을 통해</li>
+                <li>즐거운 여행 되세요 :)</li>
+                </ul>
+            </div> 
+            <p class="typing"></p>
+            <img src="img/toki4.png" alt="AI">
+        </div>
+        <div class="img_box">
+            <div class="box1">
+                <img src="img/ex2.jpeg">
+                <p>경복궁</p>
+            </div>
+            <div class="box1">
+                <img src="img/ex2.jpeg">
+                <p>경복궁</p>
+            </div>
+            <div class="box1">
+                <img src="img/ex2.jpeg">
+                <p>경복궁</p>
+            </div>
+            <div class="box1">
+                <img src="img/ex2.jpeg">
+                <p>경복궁</p>
+            </div>
+            <div class="box1">
+                <img src="img/ex2.jpeg">
+                <p>경복궁</p>
+            </div>
+            <div class="box1">
+                <img src="img/ex2.jpeg">
+                <p>경복궁</p>
+            </div>
+            <div class="box1">
+                <img src="img/ex2.jpeg">
+                <p>경복궁</p>
+            </div>
+        </div>
+
+        <div class="detail_box">
+            <div class="box2">
+                <h3>동대문디지털플라자</h3>
+                <p>어쩌고 저쩌고jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

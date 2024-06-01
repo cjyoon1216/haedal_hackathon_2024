@@ -23,16 +23,18 @@
     font-style: normal;
 }
 
-body {
+
+body{   
     all:unset;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    width: 100%;
+    width:100%;
     height:100%;
     text-decoration: none;
     background-color: #f1efed;
 }
+
 .intro-container{
     width: 300px;
 }
@@ -45,72 +47,40 @@ body {
     font-size: 36px;
     margin: 20px 0px 20px 230px;
     color: #333;
-}   
-
-#travelForm {
-    background-color: #fff;
-    padding: 20px 50px 20px 50px;
-    margin: 10px 100px 10px 100px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    font-size: 17px;
-    height: 150px;
+}    
+.all{
+    width: 90%;
 }
 
-label {
-    margin-top: 10px;
-    display: block;
-    
-    font-family: 'S-CoreDream-3Light';
-}
-.box{
+.user_information{
     display: flex;
+    margin-left: 100px;
+}
+.user_information p{
+    font-family: 'S-CoreDream-3Light';
+    margin-left:10px; 
+}
+
+.ai_img{
+    width: 470px;
+    position:fixed;
+    bottom:0;
+    right: 0;
+}
+
+.ai_img > img{
     width: 100%;
 }
-.box > *{
-    width: 25%;
-     
-}
-.box :not(last-child){
-    margin-right: 13px;
-}
-
-
-
-input, select {
-    margin: 5px 0 20px 0;
-    padding: 10px;
+.img_box{
+    padding: 30px 0px 0px 0px;
+    border-radius: 30px;
+    margin-left: 70px;
     width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: 'S-CoreDream-3Light';
-}
-
-#travelForm button {
-    background-color: #aca47c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    width: 150px;
-    cursor: pointer;
-    font-family: 'S-CoreDream-3Light';
-}
-
-#travelForm button:hover {
-    background-color: #3b3d27;
-}
-
-.ai_image{
-    width: 530px;
-    height: 100%;
-    margin: 30px 0px 0px 60px;
-    position: relative;
-    z-index: 3;
-}
-.ai_image>img{
-    width:100%;
+    height: 300px;
+    background-color: rgb(123, 122, 64);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
 }
 .typing-txt{
     display: none;
@@ -124,7 +94,7 @@ input, select {
     animation-duration: 0.4s; 
     animation-iteration-count: infinite; 
     font-size: 17px;
-    margin: 59px 0px 0px 300px;
+    margin: 50px 0px 0px 23px;
     position: absolute;
     font-family: 'DungGeunMo';
 } 
@@ -134,49 +104,50 @@ input, select {
   100%{border-right: 1px solid #fff} 
 }
 
-.result{
-    width:55%;
-    margin-left: -50px;
-    display: flex;
-    padding: 25px; 
-    position: relative
+.box1{
+    border-radius: 30px;
+    background-color: rgb(234, 232, 211);
+    width: 250px;
+    height: 250px;
+    min-width: 250px;
+    min-height: 250px;
+    margin-left: 40px;
 }
-h3{
-    color: rgb(231, 229, 219);
+.box1 img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+    height:80%;
+}
+.box1 p{
+    font-size: 17px;
     font-family: 'S-CoreDream-3Light';
-    font-weight: lighter;
-    font-size: 19px;
-    margin-left: 30px;
-}
-.plan{
-    width: 80%;
-    height: 100%;
-    background-color: #a19559;
-    border-radius: 10px;
+    margin:10px;
+    text-align: center;
 }
 
-#postForm {
-    width: 20%;
+.detail_box{
+    margin-top: 30px;
+    background-color: rgb(184, 188, 129);
+    border-radius: 30px;
+    margin-left: 70px;
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 30px 0px 0px 50px;
 }
-#postForm div{
-    position: absolute;
-    bottom:0;
-}
-#postForm button{
-    background-color: #aca47c;
-    color: white;
-    padding: 10px 20px;
-    margin: 0px 0px 30px 20px;
-    border: none;
-    border-radius: 4px;
-    width: 170px;
-    cursor: pointer;
-    font-size: 16px;
+
+.box2{
     font-family: 'S-CoreDream-3Light';
-    
 }
 
-#postForm button:hover{
-    background-color: #3b3d27;
-
+.box2 h3{
 }
+
+.box2 p{
+    margin-top: -15px;
+    background-color: aliceblue;
+    max-width: 900px;
+}
+
+  
