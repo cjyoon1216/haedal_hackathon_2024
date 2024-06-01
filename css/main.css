@@ -116,7 +116,7 @@ body{
 
 .ai_img{
     position: fixed;
-    width: 700px;
+    width: 600px;
     bottom: 0;
     left:0;
   }
@@ -136,7 +136,7 @@ body{
     animation-duration: 0.4s; 
     animation-iteration-count: infinite; 
     font-size: 23px;
-    margin: 50px 0px 0px 270px;
+    margin: 0px 0px 0px 270px;
     position: absolute;
     font-family: 'DungGeunMo';
 } 
