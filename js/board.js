@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            const places = await response.json();
+            const data = await response.json();
+            const places = data.spots; // JSON 구조에 맞게 수정
 
             // 장소 데이터를 img_box에 추가
             places.forEach((place, index) => {
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 box1.className = 'box1';
 
                 const img = document.createElement('img');
-                img.src = `img/photo-${index + 1}.jpg`; // photo-{i}.jpg로 설정
+                img.src = `img/photo-${index + 1}.jpg`; // photo-{index + 1}.jpg로 설정
                 img.alt = place.name;
 
                 const nameP = document.createElement('p');
@@ -26,6 +27,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 box1.appendChild(img);
                 box1.appendChild(nameP);
                 imgBox.appendChild(box1);
+
+                // 마지막 요소가 아닌 경우에만 class="right" div 박스를 추가
+                if (index < places.length - 1) {
+                    const right = document.createElement('div');
+                    right.className = 'right';
+                    
+                    const rightImg = document.createElement('img');
+                    rightImg.src = 'img/right2.png';
+
+                    right.appendChild(rightImg);
+                    imgBox.appendChild(right);
+                }
             });
 
             // 장소 데이터를 detail_box에 추가
@@ -37,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 h3.textContent = place.name;
 
                 const p = document.createElement('p');
-                p.textContent = `날짜: ${place.date} 시간: ${place.hour} \n세부정보: ${place.detail}`;
+                p.textContent = place.detail;
 
                 box2.appendChild(h3);
                 box2.appendChild(p);
